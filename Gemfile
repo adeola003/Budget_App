@@ -33,6 +33,12 @@ gem 'jbuilder'
 # Rubocop
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+# cancancan
+gem 'cancancan'
+
+#factory bot for authentification
+gem 'factory_bot_rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
