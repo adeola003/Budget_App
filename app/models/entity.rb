@@ -10,5 +10,4 @@ class Entity < ApplicationRecord
   def init
     self.amount ||= 1
   end
-
 end

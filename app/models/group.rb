@@ -11,5 +11,4 @@ class Group < ApplicationRecord
   def default_icon
     self.icon = 'https://source.unsplash.com/ocAo7MwGfHY' if icon.nil?
   end
-
 end
