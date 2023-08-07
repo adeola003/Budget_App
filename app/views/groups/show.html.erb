@@ -1,1 +1,9 @@
 <h1>show group</h1>
+<h1><%= @group.name %></h1>
+<% @entities.each do |entity| %>
+  <div class="transaction-item">
+    <%= entity.name %>: <%= entity.amount %>
+  </div>
+<% end %>
+<%= link_to 'Add a New Transaction', new_group_entity_path(@group) %>
+<%= link_to 'Back', groups_path %>

@@ -1,1 +1,9 @@
-<h1>group index</h1>
+<h1>Groups</h1>
+<% @groups.each do |group| %>
+  <div class="group-item">
+    <%= link_to group.name, group_path(group) %>
+    <%= link_to 'Edit', edit_group_path(group) %>
+    <%= link_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+<% end %>
+<%= link_to 'New Group', new_group_path %>
