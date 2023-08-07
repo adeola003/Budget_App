@@ -1,0 +1,13 @@
+<%= form_with(model: [@group, @entity], url: @entity.persisted? ? group_entity_path(@group, @entity) : group_entities_path(@group), local: true) do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Save' %>
+  </div>
+<% end %>
