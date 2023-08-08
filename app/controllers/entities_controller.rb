@@ -31,7 +31,7 @@ class EntitiesController < ApplicationController
 
   def update
     if @entity.update(entity_params)
-      redirect_to group_entities_path(@group), notice: "Entity updated successfully."
+      redirect_to group_path(@group), notice: "Entity updated successfully."
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class EntitiesController < ApplicationController
 
   def destroy
     @entity.destroy
-    redirect_to group_entities_path(@group), notice: "Entity deleted successfully."
+    redirect_to group_path(@group), notice: "Entity deleted successfully."
   end
 
   private
