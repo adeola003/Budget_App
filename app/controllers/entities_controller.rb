@@ -19,7 +19,7 @@ class EntitiesController < ApplicationController
     @entity = @group.entities.build(entity_params)
     @entity.user = current_user
     if @entity.save
-      redirect_to group_entities_path(@group), notice: "Entity created successfully."
+      redirect_to group_path(@group), notice: "Entity created successfully."
     else
       puts @entity.errors.full_messages
       render :new
