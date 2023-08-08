@@ -1,4 +1,5 @@
 <h1><%= @entity.name %></h1>
-<p>Amount: <%= @entity.amount %></p>
+<p>Amount: $<%= @entity.amount %></p>
+<p>This transaction was created on: <%= @entity.created_at.strftime('%B %d, %Y') %></p>
 <%= link_to 'Edit', edit_group_entity_path(@group, @entity) %>
 <%= link_to 'Back', group_path(@group) %>
