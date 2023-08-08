@@ -17,9 +17,11 @@ class EntitiesController < ApplicationController
 
   def create
     @entity = @group.entities.build(entity_params)
+    @entity.user = current_user
     if @entity.save
       redirect_to group_entities_path(@group), notice: "Entity created successfully."
     else
+      puts @entity.errors.full_messages
       render :new
     end
   end
