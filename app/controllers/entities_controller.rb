@@ -1,15 +1,14 @@
 class EntitiesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_group
-  before_action :set_entity, only: [:show, :edit, :update, :destroy]
+  before_action :set_entity, only: %i[show edit update destroy]
 
   def index
     @entities = @group.entities.order(created_at: :desc)
     @total_amount = @entities.sum(:amount)
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @entity = @group.entities.build
@@ -19,19 +18,18 @@ class EntitiesController < ApplicationController
     @entity = @group.entities.build(entity_params)
     @entity.user = current_user
     if @entity.save
-      redirect_to group_path(@group), notice: "Entity created successfully."
+      redirect_to group_path(@group), notice: 'Entity created successfully.'
     else
       puts @entity.errors.full_messages
       render :new
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @entity.update(entity_params)
-      redirect_to group_path(@group), notice: "Entity updated successfully."
+      redirect_to group_path(@group), notice: 'Entity updated successfully.'
     else
       render :edit
     end
@@ -39,7 +37,7 @@ class EntitiesController < ApplicationController
 
   def destroy
     @entity.destroy
-    redirect_to group_path(@group), notice: "Entity deleted successfully."
+    redirect_to group_path(@group), notice: 'Entity deleted successfully.'
   end
 
   private
