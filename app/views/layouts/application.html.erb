@@ -11,7 +11,8 @@
   </head>
 
   <body>
-  <nav class="main-nav">
+    <section class="page-wrapper">
+    <nav class="main-nav">
           <ul class="navbar-links">
               <li><%= link_to 'Home', root_path %></li>
               <li><%= link_to 'Groups', groups_path %></li>
@@ -20,7 +21,7 @@
               <% if user_signed_in? %>
                 <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
               <% else %>
-                <%= button_to "Login", new_user_session_path %>
+                <%= button_to "Login", new_user_session_path, class: "login-btn" %>
               <% end %>
           </div>
   </nav>
@@ -44,5 +45,9 @@
   </div>
 </nav>
     <%= yield %>
+    </section>
+    <footer>
+    <p>&copy; <%= Time.now.year %> BudgetApp by Abdel-Khafid SALAOU. All rights reserved.</p>
+  </footer>
   </body>
 </html>

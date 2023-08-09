@@ -69,6 +69,43 @@
     display: none;
   }
 
+  .page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Footer styles */
+  footer {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+
+  /* navbar buttons */
+
+  .signout-btn, .login-btn {
+    padding: 10px 15px;
+    background-color: var(--second-color);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .login-btn:hover {
+    background-color: #4b8e0b;
+  }
+  .signout-btn:hover {
+    background-color: red;
+  }
+
 
   @media (max-width: 768px) {
 
