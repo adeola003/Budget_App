@@ -1,0 +1,14 @@
+<h1>Welcome to the Budget App</h1>
+
+<% if user_signed_in? %>
+  <p>Here's how you can get started with the app:</p>
+  <ul>
+    <li>Create groups to organize your transactions.</li>
+    <li>Add transactions to each group to track your expenses.</li>
+    <li>View the summary of your expenses in each group.</li>
+  </ul>
+<% else %>
+  <p>To get started, please register or log in:</p>
+  <%= link_to 'Register', new_user_registration_path %>
+  <%= link_to 'Log in', new_user_session_path %>
+<% end %>
