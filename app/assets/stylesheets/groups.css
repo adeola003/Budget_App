@@ -1,0 +1,202 @@
+/* Styling for index */
+
+/* app/assets/stylesheets/custom_styles.css.scss */
+
+/* ... (other styles) */
+
+.page-title {
+    font-size: 24px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .groups-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .group-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .group-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .group-details {
+    flex-grow: 1;
+  }
+
+  .group-name {
+    font-size: 18px;
+    color: var(--main-color);
+    margin: 0;
+  }
+
+  .group-actions {
+    margin-top: 10px;
+  }
+
+  .edit-button {
+    background-color: var(--second-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .delete-button {
+    background-color: #ff5858;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .new-group-button {
+    display: inline-block;
+    background-color: var(--second-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+    width: fit-content;
+  }
+
+  /* end of styles for index view */
+
+  /* Begining of show view */
+
+  .transactions-list {
+    margin-bottom: 20px;
+  }
+
+  .transaction-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .transaction-info {
+    flex-grow: 1;
+  }
+
+  .entity-name {
+    font-size: 18px;
+    color: var(--main-color);
+    margin: 0;
+  }
+
+  .entity-amount {
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .transaction-actions {
+    margin-left: 10px;
+  }
+
+  .delete-button {
+    background-color: #ff5858;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .add-transaction-button {
+    display: inline-block;
+    background-color: var(--second-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: fit-content;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: var(--main-color);
+    text-decoration: none;
+    margin-top: 10px;
+  }
+
+.total-amount {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-top: 5px;
+  }
+
+
+  /* End for show view */
+
+  /* Forms styling  */
+.category-form {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid var(--second-color);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    width: 75%;
+  }
+
+  .field {
+    margin-bottom: 15px;
+    width: 90%;
+  }
+
+  .field label {
+    display: block;
+    font-weight: bold;
+  }
+
+  .field input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--second-color);
+    border-radius: 3px;
+  }
+
+  .actions {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .actions input[type="submit"] {
+    background-color: var(--second-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .actions input[type="submit"]:hover {
+    background-color: darken(var(--second-color), 10%);
+  }
+
+
+/* End of forms styling */
