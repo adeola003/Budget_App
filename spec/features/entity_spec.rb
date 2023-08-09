@@ -14,7 +14,7 @@ RSpec.describe 'entities/show', type: :feature do
   end
 
   it 'displays the entity amount' do
-    expect(page).to have_selector('p', text: "$300")
+    expect(page).to have_selector('p', text: '$300')
   end
 
   it 'displays the creation date of the entity' do

@@ -1,30 +1,29 @@
 require 'rails_helper'
 
-RSpec.describe "groups/index", type: :feature do
+RSpec.describe 'groups/index', type: :feature do
   let(:user) { create(:user) }
-  let!(:groups) { create_list(:group, 3, user: user) }
+  let!(:groups) { create_list(:group, 3, user:) }
 
   before do
     sign_in user
     visit groups_path
   end
 
-
-  it "displays the group names" do
-    expect(page).to have_text("MyString")
+  it 'displays the group names' do
+    expect(page).to have_text('MyString')
   end
 
-  it "displays edit and delete links for each group" do
-    expect(page).to have_link("Edit", count: 3)
-    expect(page).to have_selector(".delete-button", count: 3)
+  it 'displays edit and delete links for each group' do
+    expect(page).to have_link('Edit', count: 3)
+    expect(page).to have_selector('.delete-button', count: 3)
   end
 
-  it "displays a link to create a new group" do
-    expect(page).to have_link("New Group")
+  it 'displays a link to create a new group' do
+    expect(page).to have_link('New Group')
   end
 
-  it "displays the correct icon for each group" do
-    expect(page).to have_css(".icon", count: 3)
+  it 'displays the correct icon for each group' do
+    expect(page).to have_css('.icon', count: 3)
   end
 end
 
@@ -60,4 +59,3 @@ RSpec.describe 'groups/show', type: :feature do
     expect(page).to have_link('Back', href: groups_path)
   end
 end
-
