@@ -3,7 +3,12 @@ class GroupsController < ApplicationController
   before_action :set_group, only: %i[show edit update destroy]
 
   def index
-    @groups = current_user.groups
+    @groups = current_user.groups.includes(:entities)
+
+    # Calculate total amount for each group
+    @groups.each do |group|
+      group.total_amount = group.entities.sum(:amount)
+    end
   end
 
   def show

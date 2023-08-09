@@ -1,5 +1,6 @@
 class Group < ApplicationRecord
   before_save :default_icon
+  attr_accessor :total_amount
 
   belongs_to :user
   has_many :entities, dependent: :destroy

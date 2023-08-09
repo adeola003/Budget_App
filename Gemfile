@@ -39,6 +39,9 @@ gem 'cancancan'
 # factory bot for authentification
 gem 'factory_bot_rails'
 
+# jquery
+gem 'jquery-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

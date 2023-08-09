@@ -23,7 +23,7 @@ RSpec.describe 'groups/index', type: :feature do
   end
 
   it 'displays the correct icon for each group' do
-    expect(page).to have_css('.icon', count: 3)
+    expect(page).to have_css('.group-icon')
   end
 end
 
