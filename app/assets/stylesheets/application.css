@@ -16,9 +16,10 @@
 
 
 
- /* app/assets/stylesheets/custom_styles.css.scss */
+
 
 /* Set main colors */
+
 :root {
     --main-color: #3778c2;
     --second-color: #5fb523;
@@ -73,6 +74,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    width: auto;
   }
 
   /* Footer styles */
@@ -253,10 +255,7 @@
   padding: 10px 0;
   font-size: 22px;
 }
-
-/*
- * And let's slide it in from the left
- */
+/* slide from the left */
 #menuToggle input:checked ~ ul
 {
   transform: none;

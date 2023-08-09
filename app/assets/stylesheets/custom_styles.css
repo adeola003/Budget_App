@@ -1,0 +1,57 @@
+
+/* Set main colors */
+:root {
+    --main-color: #3778c2;
+    --second-color: #5fb523;
+    --text-color: #434654;
+  }
+
+  /* Devise form styles */
+  .registration-form,
+  .login-form {
+    border: 1px solid var(--main-color);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .field-devise {
+    margin-bottom: 10px;
+  }
+
+  .field-devise label {
+    display: block;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  .field-devise input[type="text"],
+  .field-devise input[type="email"],
+  .field-devise input[type="password"] {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  .actions-devise {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .actions-devise input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .actions-devise input[type="submit"]:hover {
+    background-color: var(--second-color);
+  }
