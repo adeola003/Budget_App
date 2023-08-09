@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
 
   def index
     @groups = current_user.groups.includes(:entities)
-    
+
     # Calculate total amount for each group
     @groups.each do |group|
       group.total_amount = group.entities.sum(:amount)
