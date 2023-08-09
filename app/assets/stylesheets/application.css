@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+ /* app/assets/stylesheets/custom_styles.css.scss */
+
+/* Set main colors */
+:root {
+    --main-color: #3778c2;
+    --second-color: #5fb523;
+    --text-color: #434654;
+  }
+
+  /* Navigation bar styles */
+  nav {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 0;
+  }
+
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .navbar-links li {
+    margin: 0 15px;
+  }
+
+  .navbar-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .navbar-links li a:hover {
+    color: var(--second-color);
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  /* Responsive navigation */
+  nav div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: var(--main-color);
+    color: white;
+    transition: left 0.3s;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+
+  @media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+      }
+
+      .navbar-toggle input, .menu-container {
+        display: none;
+      }
+  }

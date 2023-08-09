@@ -12,16 +12,36 @@
 
   <body>
   <nav>
-    <ul>
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Groups', groups_path %></li>
-    </ul>
-    <div> <% if user_signed_in? %>
-          <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
-        <% else %>
-          <%= button_to "Login", new_user_session_path %>
-        <% end %>
-    </div>
+      <div class="navbar-toggle">
+          <input type="checkbox" id="navbar-checkbox">
+          <label for="navbar-checkbox" class="navbar-icon">&#9776;</label>
+      </div>
+      <div class="menu-container">
+          <ul class="navbar-links">
+              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'Groups', groups_path %></li>
+          </ul>
+          <div class="navbar-btns">
+              <% if user_signed_in? %>
+                <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
+              <% else %>
+                <%= button_to "Login", new_user_session_path %>
+              <% end %>
+          </div>
+      </div>
+      <div class="sidebar">
+            <ul class="sidebar-links">
+              <li><%= link_to 'Home', root_path %></li>
+              <li><%= link_to 'Groups', groups_path %></li>
+            </ul>
+            <div class="sidebar-btns">
+                <% if user_signed_in? %>
+                        <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
+                <% else %>
+                        <%= button_to "Login", new_user_session_path %>
+                <% end %>
+            </div>
+       </div>
   </nav>
     <%= yield %>
   </body>
