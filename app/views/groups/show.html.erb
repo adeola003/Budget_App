@@ -1,3 +1,30 @@
+ <nav class="sec-nav-v" role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Groups', groups_path %></li>
+      <li>
+      <% if user_signed_in? %>
+                <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
+              <% else %>
+                <%= button_to "Login", new_user_session_path %>
+              <% end %>
+      </li>
+    </ul>
+  </div>
+  <div class="view-title">
+  <span class="back-btn"><%= link_to '←', groups_path %></span>
+  <h2>Transactions</h2>
+  </div>
+</nav>
+<div class="summary">
+    <p>Total transactions</p>
+    <h3>$<%= @total_amount %></h3>
+    </div>
 <h1 class="page-title"> Transactions for <%= @group.name %> Category</h1>
 
 <div class="transactions-list">
@@ -15,4 +42,3 @@
 </div>
 
 <%= link_to 'Add a New Transaction', new_group_entity_path(@group), class: 'add-transaction-button' %>
-<%= link_to 'Back', groups_path, class: 'back-link' %>

@@ -1,4 +1,9 @@
-<h2>Log in</h2>
+<nav class="sec-nav" role="navigation">
+  <div>
+  <span class="back-btn"><%= link_to '←', root_path %></span>
+  <h2>Log in</h2>
+  </div>
+</nav>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "login-form") do |f| %>
   <div class="field-devise">

@@ -1,4 +1,15 @@
 <!-- app/views/entities/show.html.erb -->
+<nav class="sec-nav-details" role="navigation">
+
+  <div class="view-title">
+  <span class="back-btn"><%= link_to '←', group_path(@group) %></span>
+  <h2>Details</h2>
+  </div>
+</nav>
+<div class="group-sumry">
+  <img class="group-icon" src="<%= @group.icon %>" alt="Group Icon">
+  <h1><%= @group.name %></h1>
+  </div>
 <div class="entity-details">
   <h1><%= @entity.name %></h1>
   <p>Amount: $<%= @entity.amount %></p>
