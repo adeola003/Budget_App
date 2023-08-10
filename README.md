@@ -65,6 +65,8 @@ I created a Ruby on Rails application that allows the user to:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
+## [Go live](https://adeola-budget-app.onrender.com)
+## [Video presentation](https://www.loom.com/share/2fe8239c00a7440eae1f30b3e00cc953?sid=bd08630a-596f-4e13-8dc1-71de0898ea39)
 
 
 <!-- GETTING STARTED -->
@@ -162,6 +164,7 @@ If you like this repo dont forget to give it a star.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank the Microverse community and the partners.
+I also give thanks to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella), the author of [the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

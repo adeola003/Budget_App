@@ -1,0 +1,379 @@
+.sec-nav-v {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .add-transaction-button {
+    position: relative;
+    display: inline-block;
+    background-color: var(--second-color);
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 275px;
+    height: 60px;
+    text-align: center;
+  }
+
+  /* hamburger */
+
+  .main-nav {
+    display: none;
+  }
+
+  .sec-nav-v {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+  }
+
+  #menuToggle-v {
+    display: block;
+    position: relative;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle-v a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle-v a:hover {
+    color: tomato;
+  }
+
+  #menuToggle-v input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle-v span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0;
+    transition:
+      transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle-v span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle-v span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle-v input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle-v input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle-v input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu-v {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -58px;
+    padding: 50px;
+    padding-top: 125px;
+    background: var(--main-color);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu-v li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /* slide from the left */
+  #menuToggle-v input:checked ~ ul {
+    transform: none;
+  }
+}
+
+/* Styling for index */
+
+.views-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.back-btn a:hover {
+  text-decoration: underline;
+  border: solid white 4px;
+  border-radius: 10px;
+}
+
+.view-title {
+  display: flex;
+  padding-left: 20vw;
+  align-items: baseline;
+  column-gap: 50px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(237, 244, 238);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.group-sumry {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 15px;
+}
+
+/* ... (other styles) */
+
+.page-title {
+  font-size: 24px;
+  color: var(--main-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.groups-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.group-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.group-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.group-details {
+  flex-grow: 1;
+}
+
+.group-name {
+  font-size: 18px;
+  color: var(--main-color);
+  margin: 0;
+}
+
+.group-actions {
+  margin-top: 10px;
+}
+
+.edit-button {
+  background-color: var(--second-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: #ff5858;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.new-group-button {
+  display: inline-block;
+  background-color: var(--second-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 20px;
+  width: fit-content;
+}
+
+/* end of styles for index view */
+
+/* Begining of show view */
+
+.transactions-list {
+  margin-bottom: 20px;
+}
+
+.transaction-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.transaction-info {
+  flex-grow: 1;
+}
+
+.entity-name {
+  font-size: 18px;
+  color: var(--main-color);
+  margin: 0;
+}
+
+.entity-amount {
+  font-size: 16px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.transaction-actions {
+  margin-left: 10px;
+}
+
+/* .delete-button {
+  background-color: #ff5858;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+} */
+
+.back-link {
+  display: inline-block;
+  color: var(--main-color);
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.total-amount {
+  font-size: 18px;
+  color: var(--text-color);
+  margin-top: 5px;
+}
+
+/* End for show view */
+
+/* Forms styling  */
+.category-form {
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--second-color);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 75%;
+}
+
+.field {
+  margin-bottom: 15px;
+  width: 90%;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+}
+
+.field input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--second-color);
+  border-radius: 3px;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.actions input[type="submit"] {
+  background-color: var(--second-color);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: darken(var(--second-color), 10%);
+}
+
+/* End of forms styling */

@@ -1,0 +1,41 @@
+ <nav class="sec-nav-v" role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Groups', groups_path %></li>
+      <li>
+      <% if user_signed_in? %>
+                <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
+              <% else %>
+                <%= button_to "Login", new_user_session_path %>
+              <% end %>
+      </li>
+    </ul>
+  </div>
+  <div class="view-title">
+  <span class="back-btn"><%= link_to '←', root_path %></span>
+  <h2>Categories</h2>
+  </div>
+
+</nav>
+<div class="groups-list">
+  <% @groups.each do |group| %>
+    <div class="group-item">
+      <img class="group-icon" src="<%= group.icon %>" alt="Group Icon">
+      <div class="group-details">
+        <h2 class="group-name"><%= link_to group.name, group_path(group) %></h2>
+        <div class="group-actions">
+          <%= link_to 'Edit', edit_group_path(group), class: "edit-button" %>
+          <%= button_to 'Delete', group_path(group), method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete-button' %>
+          <p class="total-amount">Total transactions: $<%= group.total_amount %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'New Group', new_group_path, class: "new-group-button" %>
