@@ -1,22 +1,5 @@
 
 <nav class="sec-nav" role="navigation">
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul id="menu">
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Groups', groups_path %></li>
-      <li>
-      <% if user_signed_in? %>
-                <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "signout-btn" %>
-              <% else %>
-                <%= button_to "Login", new_user_session_path %>
-              <% end %>
-      </li>
-    </ul>
-  </div>
   <div>
   <span class="back-btn"><%= link_to '←', root_path %></span>
   <h2>Sign up</h2>

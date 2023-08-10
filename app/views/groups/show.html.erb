@@ -21,6 +21,10 @@
   <h2>Transactions</h2>
   </div>
 </nav>
+<div class="summary">
+    <p>Total transactions</p>
+    <h3>$<%= @total_amount %></h3>
+    </div>
 <h1 class="page-title"> Transactions for <%= @group.name %> Category</h1>
 
 <div class="transactions-list">
@@ -38,4 +42,3 @@
 </div>
 
 <%= link_to 'Add a New Transaction', new_group_entity_path(@group), class: 'add-transaction-button' %>
-<%= link_to 'Back', groups_path, class: 'back-link' %>

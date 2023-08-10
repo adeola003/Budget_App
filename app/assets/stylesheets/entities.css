@@ -1,4 +1,16 @@
 /* styles for entity show */
+.sec-nav-details {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sec-nav-details {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 0;
+    display: flex;
+  }
+}
 
 .entity-details {
   max-width: 400px;

@@ -1,32 +1,24 @@
-/* Styling for index */
-
-.views-nav {
-  display: flex;
-  justify-content: space-around;
-}
-
-.back-btn a {
-  text-decoration: none;
-  color: white;
-  font-size: larger;
-  font-weight: 900;
-}
-
-.back-btn a:hover {
-  text-decoration: underline;
-  border: solid white 4px;
-  border-radius: 10px;
-}
-
-.view-title {
-  display: flex;
-  padding-left: 20vw;
-  align-items: baseline;
-  column-gap: 50px;
+.sec-nav-v {
+  display: none;
 }
 
 @media (max-width: 768px) {
-  /* hamberger */
+  .add-transaction-button {
+    position: relative;
+    display: inline-block;
+    background-color: var(--second-color);
+    margin-left: 5vw;
+    margin-right: 5vw;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 275px;
+    height: 60px;
+    text-align: center;
+  }
+
+  /* hamburger */
 
   .main-nav {
     display: none;
@@ -155,6 +147,50 @@
   }
 }
 
+/* Styling for index */
+
+.views-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.back-btn a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+  font-weight: 900;
+}
+
+.back-btn a:hover {
+  text-decoration: underline;
+  border: solid white 4px;
+  border-radius: 10px;
+}
+
+.view-title {
+  display: flex;
+  padding-left: 20vw;
+  align-items: baseline;
+  column-gap: 50px;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(237, 244, 238);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.group-sumry {
+  display: flex;
+  column-gap: 30px;
+  margin-top: 15px;
+}
+
 /* ... (other styles) */
 
 .page-title {
@@ -277,16 +313,6 @@
   border: none;
   cursor: pointer;
 } */
-
-.add-transaction-button {
-  display: inline-block;
-  background-color: var(--second-color);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  width: fit-content;
-}
 
 .back-link {
   display: inline-block;
